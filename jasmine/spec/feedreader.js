@@ -32,10 +32,10 @@ $(function() {
          * and that the URL is not empty.
          */
         it('Each feed object has url and not empty', function() {
-            allFeeds.forEach(feed => {
+            for (feed of allFeeds ){
                 expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe('');
-            });
+            };
         })
 
 
