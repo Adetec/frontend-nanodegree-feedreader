@@ -45,8 +45,8 @@ $(function() {
          */
         it('Each feed object has name and not empty', function() {
             for (feed of allFeeds ){
-                expect(feed.url).toBeDefined();
-                expect(feed.url).not.toBe('');
+                expect(feed.name).toBeDefined();
+                expect(feed.name).not.toBe('');
             };
         });
     });
