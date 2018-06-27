@@ -43,7 +43,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it('Each feed object has url and not empty', function() {
+        it('Each feed object has name and not empty', function() {
             for (feed of allFeeds ){
                 expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe('');
@@ -59,7 +59,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        
+
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
