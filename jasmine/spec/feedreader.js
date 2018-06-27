@@ -36,7 +36,7 @@ $(function() {
                 expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe('');
             };
-        })
+        });
 
 
         /* TODO: Write a test that loops through each feed
@@ -48,7 +48,7 @@ $(function() {
                 expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe('');
             };
-        })
+        });
     });
 
 
