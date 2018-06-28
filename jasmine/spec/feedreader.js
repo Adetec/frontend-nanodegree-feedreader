@@ -70,7 +70,7 @@ $(() => {
         it('Menu changes visibilty when Icon is clicked', ()=> {
             $('a.menu-icon-link').trigger('click');// trigger menu click event
             expect($('body').hasClass('menu-hidden')).toBe(false);// Expect then if menu appears
-         
+
             $('a.menu-icon-link').trigger('click');// trigger menu click event
             expect($('body').hasClass('menu-hidden')).toBe(true);// Expect then if menu hides
         });
