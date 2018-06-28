@@ -22,8 +22,8 @@ $(function() {
          * page?
          */
         it('are defined', function() {
-            expect(allFeeds).toBeDefined();
-            expect(allFeeds.length).not.toBe(0);
+            expect(allFeeds).toBeDefined();// Expect if allFeeds variable is defined
+            expect(allFeeds.length).not.toBe(0);// Expect if it isn't empty
         });
 
 
@@ -32,9 +32,9 @@ $(function() {
          * and that the URL is not empty.
          */
         it('Each feed object has url and not empty', function() {
-            for (feed of allFeeds ){
-                expect(feed.url).toBeDefined();
-                expect(feed.url).not.toBe('');
+            for (feed of allFeeds ){// Loop over all array objects
+                expect(feed.url).toBeDefined();// Expect if url key exist in each object
+                expect(feed.url).not.toBe('');// Expect if it isn't empty
             };
         });
 
@@ -45,8 +45,8 @@ $(function() {
          */
         it('Each feed object has name and not empty', function() {
             for (feed of allFeeds ){
-                expect(feed.name).toBeDefined();
-                expect(feed.name).not.toBe('');
+                expect(feed.name).toBeDefined();// Expect if name key exist in each object
+                expect(feed.name).not.toBe('');// Expect if it isn't empty
             };
         });
     });
@@ -60,7 +60,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
         it('Menu element is hidden by default', ()=>{
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBe(true);// Expect if menu element is hidden by default
         });
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -68,11 +68,11 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
         it('Menu changes visibilty when Icon is clicked', ()=> {
-            $('a.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBe(false);
+            $('a.menu-icon-link').trigger('click');// trigger menu click event
+            expect($('body').hasClass('menu-hidden')).toBe(false);// Expect then if menu appears
          
-            $('a.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            $('a.menu-icon-link').trigger('click');// trigger menu click event
+            expect($('body').hasClass('menu-hidden')).toBe(true);// Expect then if menu hides
         });
     });
     /* TODO: Write a new test suite named "Initial Entries" */
@@ -86,8 +86,9 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, done);
         });
+
         it('There is at least one entry', ()=> {
-            expect($('.entry').length).not.toBe(0);
+            expect($('.entry').length).not.toBe(0);//Expect if There is one or more entries
         });
     });
 
@@ -97,14 +98,15 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        var oldFeed;
+        let oldFeed;
         beforeEach(function(done) {
-            // Get old feed
+            // Get actual feed
             oldFeed = $('.feed').html();
+            // Bring
             loadFeed(1, done);
         });
         it('New feed is selected', () => {
-            expect($('.feed').html()).not.toBe(oldFeed);
+            expect($('.feed').html()).not.toBe(oldFeed);// Expect if new feed is selected
         });
     });
 }());
