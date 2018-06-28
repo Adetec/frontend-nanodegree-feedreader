@@ -86,7 +86,7 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, done);
         });
-        it('At least one entry is loaded', ()=> {
+        it('There is at least one entry', ()=> {
             expect($('.entry').length).not.toBe(0);
         })
 
